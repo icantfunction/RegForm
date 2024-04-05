@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="header">Registration Form</h1>
+        <p class="header">Please fill out this form with the required information.</p>
+        <form action="https://register-demo.freecodecamp.org" method="post">
+            <fieldset>
+                <label for="fname">Enter Your First Name: <input id="fname" type="text" required minlength="2"></label>
+                <label for="lname">Enter Your Last Name: <input id="lname" type="text" required minlength="2"></label>
+                <label for="zcode">Enter Your Zip Code: <input id="zcode" type="text" required minlength="5"></label>
+                <label for='dob'>Enter Your Date of Birth: <input id="dob" type="date" min="1900-01-01" max="2022-12-31"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Who is the plan for? (Required)</legend>
+                <label><input class="inline" type='radio' name="tplan" checked> Family Plan</label>
+                <label><input class='inline' type="radio" name='tplan'> Individual Plan</label>
+            </fieldset>
+            <fieldset>
+                <label>
+                    <select name="tdevice" required>
+                        <option value="" disabled selected>Select Your Device</option>
+                        <option value="iPhone">iPhone</option>
+                        <option value="Android">Android</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+                <p class="p2">What do you need health insurance for? (Required)</p>
+                <label for="hc-needs">
+                    <textarea row="3" cols="30" for="hc-needs" placeholder="I take x amount of medications, I see my specialist x times a year and ..."></textarea>
+                </label>
+                <p class="p2">Name of any primary care physicians, specialist and hospitals you want included.</p>
+                <label for="hc-providers">
+                    <textarea row="3" cols="30" for="hc-providers" placeholder="Dr. Smith, Dr. Johnson, St. Mary's Hospital, ..."></textarea>
+            </fieldset>
+            <label class="TCPA" for="TCPA"><input id="TCPA" required type='checkbox'>I agree to TCPA Terms & Conditions</label>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
